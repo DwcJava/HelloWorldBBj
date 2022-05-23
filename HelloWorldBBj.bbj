@@ -7,7 +7,7 @@ declare BBjButton button!
 api! = BBjAPI()
 sysgui! = api!.openSysGui("X0")
 
-wnd! = sysgui!.addWindow(sysgui!.getAvailableContext(),0,0,0,0, "Hello World BBj", $01111083$)
+wnd! = sysgui!.addWindow(0,0,0,0, "Hello World BBj", $01111083$)
 wnd!.setPanelStyle("display","inline-grid")
 wnd!.setPanelStyle("gap","20px")
 wnd!.setPanelStyle("margin","20px")
