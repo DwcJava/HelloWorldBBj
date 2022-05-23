@@ -17,8 +17,8 @@ wnd!.setPanelStyle("border","1px dotted")
 st! = wnd!.addStaticText(100,"Hello World")
 
 btn! = wnd!.addButton(101,"Say Hello")
-btn!.setAttribute("Theme","DANGER")
-btn!.setAttribute("Expanse","MEDIUM")
+btn!.setAttribute("theme","danger")
+btn!.setAttribute("expanse","l")
 
 btn!.setCallback(BBjAPI.ON_BUTTON_PUSH,"pushed")
 
