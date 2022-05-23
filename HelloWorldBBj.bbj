@@ -1,0 +1,33 @@
+declare BBjAPI api!
+declare BBjSysGui sysgui!
+declare BBjTopLevelWindow wnd!
+declare BBjStaticText st!
+declare BBjButton button!
+
+api! = BBjAPI()
+sysgui! = api!.openSysGui("X0")
+
+wnd! = sysgui!.addWindow(sysgui!.getAvailableContext(),0,0,0,0, "Hello World BBj", $01111083$)
+wnd!.setPanelStyle("display","inline-grid")
+wnd!.setPanelStyle("gap","20px")
+wnd!.setPanelStyle("margin","20px")
+wnd!.setPanelStyle("padding","20px")
+wnd!.setPanelStyle("border","1px dotted")
+
+st! = wnd!.addStaticText(100,"Hello World")
+
+btn! = wnd!.addButton(101,"Say Hello")
+btn!.setAttribute("Theme","DANGER")
+btn!.setAttribute("Expanse","MEDIUM")
+
+btn!.setCallback(BBjAPI.ON_BUTTON_PUSH,"pushed")
+
+process_events
+
+pushed:
+    a=msgbox("Hello World")
+return    
+    
+    
+
+    
